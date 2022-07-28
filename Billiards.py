@@ -140,12 +140,11 @@ def collision(balls): #collision with ball
                     '''b1.vx,b2.vx=((1-e)*b1.vx+(1+e)*b2.vx)/2, ((1+e)*b1.vx+(1-e)*b2.vx)/2
                     b1.vy,b2.vy=((1-e)*b1.vy+(1+e)*b2.vy)/2, ((1+e)*b1.vy+(1-e)*b2.vy)/2'''
 
-
                     #new version 3.0 collision
                     V = np.array([b1.vx, b1.vy, b2.vx, b2.vy]).T
                     P = np.kron(np.eye(2), rotation_matrix(col[name][1]))
                     P_inv = np.kron(np.eye(2), rotation_matrix(-col[name][1]))
-
+                    # V'=(P^-1AP)V
                     V_later = np.matmul(P_inv, np.matmul(col_matrix, np.matmul(P, V)))
                     b1.vx, b1.vy, b2.vx, b2.vy = tuple(V_later)
             else:
@@ -182,7 +181,7 @@ def record(p1,p2):
                     lines[i]=p1+':'+str(score[0])
             elif line.split(':')[0]==p2:
                 if score[1]>int(line.split(':')[1]):
-                    lines[i]=p2+':'+str(score[0])
+                    lines[i]=p2+':'+str(score[1])
 
     with open('record.txt','w') as f:
         f.write('\n'.join(lines))
@@ -382,7 +381,7 @@ def game(p1,p2):
         manager.draw_ui(canvas)
         p.display.flip()
 
-    record(p1,p2)
+    record(p1, p2)
     return
 
 main()
