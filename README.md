@@ -1,5 +1,7 @@
 # Billiards
-Billiards Pygame in 2020
+Four-ball Billiards Pygame in 2020
+
+Recently updated: 2022/7/25
 ## version 0.0 | 2020/7/8 ~ 2020/7/11
       - 공과 공, 공과 벽 충돌
       - 큐대 회전 및 힘조절
