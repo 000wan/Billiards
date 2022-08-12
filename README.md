@@ -20,3 +20,6 @@ Recently updated: 2022/7/25
 ## version 3.0 | 2022/7/25
       - 행렬과 좌표변환을 이용한 충돌 모션 개선
       - 에러 수정
+
+###Reference
+[Elastic collision - Wikipedia](https://en.wikipedia.org/wiki/Elastic_collision#Two-dimensional_collision_with_two_moving_objects)
