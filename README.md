@@ -33,6 +33,8 @@ Download modules with 'pip install ~'
       - 행렬과 좌표변환을 이용한 충돌 모션 개선
       - 에러 수정
 
-## Reference
+## Further Reading...
+[2차원 비탄성 충돌 문제 - 어떻게 해결했는가. - NAVER blog](https://blog.naver.com/coder1023/222878888541)
+
 
 [Elastic collision - Wikipedia](https://en.wikipedia.org/wiki/Elastic_collision#Two-dimensional_collision_with_two_moving_objects)
